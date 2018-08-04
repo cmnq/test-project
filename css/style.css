@@ -1,0 +1,780 @@
+/* LAYOUT / LOGO&NAV / HERO IMG&HEADING / FEATURES / BUTTONS /GALLERY /SLOGAN /OFERTA/PRICING/KONTAKT/ FOOTER */
+
+
+/*
+LAYOUT - 19 - 44
+LOGO&NAV- 47 - 137
+HERO IMG&HEADING - 142 - 161 
+FEATURES - 164 - 194
+BUTTONS - 197 - 253
+GALLERY - 255 - 283
+SLOGA - 285 - 300 
+OFERTA - 303 - 352
+PRCING - 356 - 455
+KONTAKT - 458 - 509
+FOOTER - 511 - 558 */
+
+
+/* layout */
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+html a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.center-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1366px;
+    padding-top: 8px
+}
+
+
+/* layout */
+
+
+/* logo & nav */
+
+.logo {
+    position: fixed;
+    float: left;
+    margin: 5px 20px;
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.navy ul {
+    background: #214c67;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: darkorange;
+    font-size: 20px;
+}
+
+.menu-icon {
+    widows: 100%;
+    background: #214c67;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 580px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 25%;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #214c67;
+        z-index: 999;
+    }
+    nav.navy ul {
+        background: #214c67;
+        z-index: 999;
+    }
+    .showing {
+        max-height: 20em;
+        z-index: 999;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* logo & nav */
+
+
+/* hero img, heading */
+
+.hero {
+    height: 100vh;
+    /* 100% vertical height */
+    background: url(../img/imgfirst.jpeg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero .center-wrapper {
+    max-width: 700px;
+    position: relative;
+    top: 25%;
+    color: white;
+}
+
+.hero .heading {
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 45px;
+}
+
+
+/* hero img, heading */
+
+
+/* FEATURES - USŁUGI */
+
+.features-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 160px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.features-wrapper .feature-item {
+    width: 30%;
+    text-align: center;
+}
+
+.features-wrapper .feature-item h2 {
+    color: #214c67;
+    font-weight: 700;
+}
+
+.features-wrapper .feature-item p {
+    color: #214c67;
+    font-weight: 400;
+    min-height: 140px;
+}
+
+.features-wrapper .feature-item .image img {
+    width: 100%;
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+
+/* FEATURES - USŁUGI */
+
+
+/* buttony */
+
+.btn {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn.btn-orange {
+    color: #214c67;
+    border-color: #214c67
+}
+
+.btn-cube-hover .btn {
+    display: block;
+}
+
+.btn-features {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid darkorange;
+    color: darkorange;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-cube-hover {
+    display: inline-block;
+    height: 44px;
+    transition: all 300ms ease;
+    transform-style: preserve-3d;
+}
+
+.btn-cube-hover:hover {
+    transform: rotateX(89deg)
+}
+
+.btn-cube-hover .default {
+    transform: translateZ(21px);
+}
+
+.btn-cube-hover .hover {
+    transform: rotateX(-90deg) translateZ(-21px);
+}
+
+
+/* buttony */
+
+
+/* galeria */
+.gallery-wrapper {
+    position: relative;
+}
+
+/* galeria */
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+    height: 100%;
+}
+
+.gallery-wrapper .item::before {
+    content: '';
+    position: absolute;
+    z-index: 99;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    
+}
+
+.gallery-wrapper .item:hover::before {
+    opacity: 0.5;
+}
+
+.gallery-wrapper .item::after {
+    content: 'Zobacz';
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    z-index: 99;
+    bottom: -34px;
+    display: block;
+    width: 50%;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: bottom .3s ease-out;
+}
+
+.gallery-wrapper .item:hover::after{
+    bottom: 47%;
+}
+        
+}
+/*slogan*/
+
+.slogan {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.slogan h1 {
+    font-weight: 400;
+    color: orange;
+}
+
+
+/*slogan*/
+
+
+/* OFERTA, POSTERY */
+
+.container {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.posterimg {
+    float: left;
+    width: 50%;
+    height: 450px;
+}
+
+.posterimg img {
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    float: left;
+    transition: transform .3s ease-out;
+}
+
+.imageleft img:hover {
+    transform: rotate(5deg) scale(1.0);
+}
+
+.imageright img:hover {
+    transform: rotate(-5deg) scale(1.0);
+}
+
+.text {
+    text-align: center;
+    width: 50%;
+    height: 450px;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.text h1 {
+    font-style: italic;
+    font-size: 39px;
+    padding: 10px;
+}
+
+.text p {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #214c67;
+}
+
+
+/* OFERTA, POSTERY */
+
+
+/* PRICING */
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+.columns {
+    float: left;
+    width: 30%;
+    padding: 22px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price-header {
+    font-size: 30px;
+    background-color: darkorange;
+}
+
+.price-eco {
+    background-color: #6CC551;
+    color: white;
+}
+
+.price-down-eco {
+    background: #A1DA90;
+    color: white;
+    font-size: 24px;
+}
+
+.price-best {
+    background: #F4D35E;
+    color: white;
+}
+
+.price-down-best {
+    background: #F7DF89;
+    color: white;
+    font-size: 24px;
+}
+
+.price-premium {
+    background: #28AFB0;
+    color: white;
+}
+
+.price-down-premium {
+    background: #76CCCC;
+    color: white;
+    font-size: 24px;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price-button {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.price-button-eco:hover {
+    background: #4CAF50;
+    transition: ease 0.3s;
+}
+
+.price-button-premium:hover {
+    background: #28AFB0;
+    transition: ease 0.3s;
+}
+
+.price-button-best:hover {
+    background: #F4D35E;
+    transition: ease 0.3s;
+}
+
+@media only screen and (max-width: 580px) {
+    .columns {
+        width: 90%;
+    }
+}
+
+
+/* PRICING */
+
+
+/* KONTAKT */
+
+.contact-box {
+    color: black;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.contact-leftside {}
+
+.contact-p {
+    font-size: 17px;
+    text-align: center;
+    word-spacing: 2px;
+    font-weight: bold;
+    color: #214c67;
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #214c67;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: darkorange;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #214c67;
+    transition: ease 1s;
+}
+
+input[type=text],
+textarea:hover {
+    color: darkorange;
+}
+
+
+/* KONTAKT */
+
+
+/*FOOTER */
+
+.footer {
+    margin: 0;
+    padding: 0;
+    background: #214c67;
+    margin-top: 25px
+}
+
+.f-sidesl {
+    float: left;
+    width: 50%;
+    font-size: 10px;
+    text-align: center;
+    line-height: 0.5px;
+    font-weight: bold;
+    color: white;
+}
+
+.f-sidesr {
+    float: right;
+    font-size: 10px;
+    text-align: center;
+    width: 50%;
+    line-height: 0.5px;
+    font-weight: bold;
+    color: white;
+}
+
+.copy {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.copy a {
+    color: white;
+    text-decoration: none;
+}
+
+.copy a:hover {
+    color: darkorange;
+    transition: 0.5s ease;
+}
+
+
+/*FOOTER */
+
+@media(max-width: 580px) {
+    
+    .features-wrapper, .feature-item{
+    max-width: 580px;
+    text-align: center;
+    display: block;
+    
+}
+    
+    .features-wrapper {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    max-width: 580px;
+}
+    .features-wrapper .image img{
+    display: flex;
+    position: relative;
+        left: 21vh
+    
+}
+
+   .hero .center-wrapper {
+    position: relative;
+    top: 25%;
+    margin: 0;
+       
+    color: white;
+}
+    
+    .hero {
+        margin: 0;
+        
+    }
+
+.hero .heading {
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 36px;
+}
+
+.features-wrapper .feature-item p {
+    color: #214c67;
+    width:56vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 400;
+    max-width: 580px;
+}
+    .features-wrapper .feature-item h2 {
+    color: #214c67;
+    width: 60vh;
+    margin: 0;
+    
+    text-align: center;
+    font-weight: 400;
+    max-width: 580px;
+}
+
+    .btn {
+   display: block;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    }
+    .container {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.posterimg img{
+    display: flex;
+    width: 60%;
+}
+
+.posterimg img {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    
+}
+    
+.text {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.text h1 {
+    font-style: italic;
+    font-size: 39px;
+    padding: 10px;
+}
+
+.text p {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #214c67;
+}
+
+}
+
+@media(max-width: 1024px) {
+     .columns {
+        width: 90%
+    }
+      .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.posterimg {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.posterimg img {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    
+}
+    
+.text {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.text h1 {
+    font-style: italic;
+    font-size: 39px;
+    padding: 10px;
+}
+
+.text p {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #214c67;
+}
+    
+
+
+
+.hero .heading {
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 30px;
+}
+    .features-wrapper, .feature-item
+    width: 100vh;
+    text-align: center;
+    display: block;
+    height: auto;
+    left: 25%;
+}
+      
+}
